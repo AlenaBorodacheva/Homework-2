@@ -122,20 +122,18 @@ namespace _1.Doubly_linked_list
                 {
                     searchNode.NextNode.PrevNode = null;
                     firstNode = searchNode.NextNode;
-                    count--;
                 }
                 else if (searchNode.NextNode == null)
                 {
                     searchNode.PrevNode.NextNode = null;
                     endNode = searchNode.PrevNode;
-                    count--;
                 }
-                else if (searchNode != firstNode && searchNode.NextNode != null)
+                else 
                 {
                     searchNode.PrevNode.NextNode = searchNode.NextNode;
                     searchNode.NextNode.PrevNode = searchNode.PrevNode;
-                    count--;
                 }
+                count--;
             }
         }
     }
