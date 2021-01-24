@@ -10,7 +10,7 @@ namespace _2.Binary_search
     {
         static void Main(string[] args)
         {
-            // Сложность: O(C*N) = O(N)
+            // Сложность: O(log(n))
             var array = new int[] {3, 4, 5, 6, 7 };
             int searchValue = 6;
             int num = BinarySearch(array, searchValue);
