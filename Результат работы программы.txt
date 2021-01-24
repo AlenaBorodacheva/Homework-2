@@ -1,0 +1,8 @@
+
+|                         Method |      Mean |     Error |    StdDev |
+|------------------------------- |----------:|----------:|----------:|
+|        PointClassDistanceBench |  9.377 ns | 0.0923 ns | 0.0819 ns |
+|  PointStructDistanceFloatBench | 11.927 ns | 0.0986 ns | 0.0922 ns |
+| PointStructDistanceDoubleBench | 13.528 ns | 0.1687 ns | 0.1578 ns |
+|        PointDistanceShortBench |  8.902 ns | 0.1455 ns | 0.1290 ns |
+
