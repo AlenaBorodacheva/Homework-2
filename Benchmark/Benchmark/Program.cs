@@ -13,16 +13,40 @@ namespace Benchmark
     }
     public class BechmarkClass
     {
+        public (PointClass PointOne, PointClass PointTwo) GenerateClass()
+        {
+            var rand = new Random();
+            var num = new int[4];
+            for (int i = 0; i < 4; i++)
+                num[i] = rand.Next(101);
+            var pointOne = new PointClass();
+            var pointTwo = new PointClass();
+            pointOne.X = num[0];
+            pointOne.Y = num[1];
+            pointTwo.X = num[2];
+            pointTwo.Y = num[3];
+            var result = (PointOne: pointOne, PointTwo: pointTwo);
+            return result;
+        }
+        public (PointStruct PointOne, PointStruct PointTwo) GenerateStruct()
+        {
+            var rand = new Random();
+            var num = new int[4];
+            for (int i = 0; i < 4; i++)
+                num[i] = rand.Next(101);
+            var pointOne = new PointStruct();
+            var pointTwo = new PointStruct();
+            pointOne.X = num[0];
+            pointOne.Y = num[1];
+            pointTwo.X = num[2];
+            pointTwo.Y = num[3];
+            var result = (PointOne: pointOne, PointTwo: pointTwo);
+            return result;
+        }
         [Benchmark]
         public void PointClassDistanceBench()
         {
-            var pointOne = new PointClass();
-            var pointTwo = new PointClass();
-            pointOne.X = 5;
-            pointOne.Y = 5;
-            pointTwo.X = 8;
-            pointTwo.Y = 8;
-            PointClassDistance(pointOne, pointTwo);
+            PointClassDistance(GenerateClass().PointOne, GenerateClass().PointTwo);
         }
         public static float PointClassDistance(PointClass pointOne, PointClass pointTwo)
         {
@@ -33,13 +57,7 @@ namespace Benchmark
         [Benchmark]
         public void PointStructDistanceFloatBench()
         {
-            var pointOne = new PointStruct();
-            var pointTwo = new PointStruct();
-            pointOne.X = 5;
-            pointOne.Y = 5;
-            pointTwo.X = 8;
-            pointTwo.Y = 8;
-            PointStructDistanceFloat(pointOne, pointTwo);
+            PointStructDistanceFloat(GenerateStruct().PointOne, GenerateStruct().PointTwo);
         }
         public static float PointStructDistanceFloat(PointStruct pointOne, PointStruct pointTwo)
         {
@@ -50,13 +68,7 @@ namespace Benchmark
         [Benchmark]
         public void PointStructDistanceDoubleBench()
         {
-            var pointOne = new PointStruct();
-            var pointTwo = new PointStruct();
-            pointOne.X = 5;
-            pointOne.Y = 5;
-            pointTwo.X = 8;
-            pointTwo.Y = 8;
-            PointStructDistanceDouble(pointOne, pointTwo);
+            PointStructDistanceDouble(GenerateStruct().PointOne, GenerateStruct().PointTwo);
         }
         public static double PointStructDistanceDouble(PointStruct pointOne, PointStruct pointTwo)
         {
@@ -67,13 +79,7 @@ namespace Benchmark
         [Benchmark]
         public void PointDistanceShortBench()
         {
-            var pointOne = new PointStruct();
-            var pointTwo = new PointStruct();
-            pointOne.X = 5;
-            pointOne.Y = 5;
-            pointTwo.X = 8;
-            pointTwo.Y = 8;
-            PointDistanceShort(pointOne, pointTwo);
+            PointDistanceShort(GenerateStruct().PointOne, GenerateStruct().PointTwo);
         }
         public static float PointDistanceShort(PointStruct pointOne, PointStruct pointTwo)
         {

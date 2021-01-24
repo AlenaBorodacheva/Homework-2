@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1.HashSet", "1.HashSet\1.HashSet.csproj", "{ECCA7168-3AB5-4AA6-AE16-DA80CE14ACEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.Tree", "2.Tree\2.Tree.csproj", "{36DB2C1D-F1DC-4E68-A350-5BD232068A13}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ECCA7168-3AB5-4AA6-AE16-DA80CE14ACEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECCA7168-3AB5-4AA6-AE16-DA80CE14ACEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECCA7168-3AB5-4AA6-AE16-DA80CE14ACEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECCA7168-3AB5-4AA6-AE16-DA80CE14ACEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36DB2C1D-F1DC-4E68-A350-5BD232068A13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36DB2C1D-F1DC-4E68-A350-5BD232068A13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36DB2C1D-F1DC-4E68-A350-5BD232068A13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36DB2C1D-F1DC-4E68-A350-5BD232068A13}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F7D7077B-5135-4ACB-92E6-F8051295F1AA}
+	EndGlobalSection
+EndGlobal

@@ -1,8 +1,26 @@
+Попытка 1:
 
-|                         Method |      Mean |     Error |    StdDev |
-|------------------------------- |----------:|----------:|----------:|
-|        PointClassDistanceBench |  9.377 ns | 0.0923 ns | 0.0819 ns |
-|  PointStructDistanceFloatBench | 11.927 ns | 0.0986 ns | 0.0922 ns |
-| PointStructDistanceDoubleBench | 13.528 ns | 0.1687 ns | 0.1578 ns |
-|        PointDistanceShortBench |  8.902 ns | 0.1455 ns | 0.1290 ns |
+|                         Method |     Mean |     Error |    StdDev |
+|------------------------------- |---------:|----------:|----------:|
+|        PointClassDistanceBench | 3.214 us | 0.0643 us | 0.0688 us |
+|  PointStructDistanceFloatBench | 3.104 us | 0.0301 us | 0.0267 us |
+| PointStructDistanceDoubleBench | 3.184 us | 0.0209 us | 0.0185 us |
+|        PointDistanceShortBench | 3.177 us | 0.0233 us | 0.0218 us |
 
+Попытка 2:
+
+|                         Method |     Mean |     Error |    StdDev |
+|------------------------------- |---------:|----------:|----------:|
+|        PointClassDistanceBench | 3.094 us | 0.0148 us | 0.0115 us |
+|  PointStructDistanceFloatBench | 3.081 us | 0.0280 us | 0.0262 us |
+| PointStructDistanceDoubleBench | 3.219 us | 0.0323 us | 0.0269 us |
+|        PointDistanceShortBench | 3.169 us | 0.0337 us | 0.0315 us |
+
+Попытка 3:
+
+|                         Method |     Mean |     Error |    StdDev |
+|------------------------------- |---------:|----------:|----------:|
+|        PointClassDistanceBench | 3.147 us | 0.0589 us | 0.0551 us |
+|  PointStructDistanceFloatBench | 3.098 us | 0.0117 us | 0.0098 us |
+| PointStructDistanceDoubleBench | 3.176 us | 0.0298 us | 0.0264 us |
+|        PointDistanceShortBench | 3.218 us | 0.0516 us | 0.0482 us |
