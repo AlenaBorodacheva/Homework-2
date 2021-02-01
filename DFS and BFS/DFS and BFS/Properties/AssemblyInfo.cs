@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Общие сведения об этой сборке предоставляются следующим набором
 // набора атрибутов. Измените значения этих атрибутов для изменения сведений,
 // связанные с этой сборкой.
-[assembly: AssemblyTitle("2.Tree")]
+[assembly: AssemblyTitle("DFS and BFS")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("2.Tree")]
+[assembly: AssemblyProduct("DFS and BFS")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Следующий GUID представляет идентификатор typelib, если этот проект доступен из модели COM
-[assembly: Guid("72184089-87a9-49bf-9a7d-d87844bae2ef")]
+[assembly: Guid("5b556d25-3058-4362-b267-69b67c438ef3")]
 
 // Сведения о версии сборки состоят из указанных ниже четырех значений:
 //

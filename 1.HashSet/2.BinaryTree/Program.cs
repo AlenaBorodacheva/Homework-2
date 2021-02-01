@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _2.Tree
+namespace _2.BinaryTree
 {
     class Program
     {
@@ -28,10 +28,14 @@ namespace _2.Tree
                     tree.Remove(value);
                     Console.WriteLine("Значение удалено.");
                 }
-                else
+                else if (num == 3)
                 {
                     PrintTree.Print(tree.Parent);
                     Console.WriteLine();
+                }
+                else
+                {
+                    tree.Clear();
                 }
                 num = Start();
             }
@@ -41,14 +45,14 @@ namespace _2.Tree
         public static int Start()
         {
             int num;
-            try 
+            try
             {
                 do
                 {
                     Console.WriteLine("Если хотите добавить элементы в дерево, нажмите 1. \n" +
                                       "Если хотите удалить элементы из дерева, нажмите 2.\n" +
                                       "Если хотите вывести дерево на экран, нажмите 3.\n" +
-                                      "Если хотите закончить, нажмите 0.");
+                                      "Если хотите очистить дерево, нажмите 0.");
                     num = int.Parse(Console.ReadLine());
                 }
                 while (num != 0 && num != 1 && num != 2 && num != 3);

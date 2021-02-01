@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{72184089-87A9-49BF-9A7D-D87844BAE2EF}</ProjectGuid>
+    <ProjectGuid>{AF4AA395-4452-48CE-8B83-6CAFD85AE0A4}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_2.Tree</RootNamespace>
-    <AssemblyName>2.Tree</AssemblyName>
+    <RootNamespace>_2.BinaryTree</RootNamespace>
+    <AssemblyName>2.BinaryTree</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="BinaryTree.cs" />
     <Compile Include="Node.cs" />
+    <Compile Include="PrintTree.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

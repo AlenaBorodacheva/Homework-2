@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _2.Tree
+namespace _2.BinaryTree
 {
     public class Node<T> : IComparable<T> where T : IComparable
     {

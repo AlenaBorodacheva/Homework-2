@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _2.Tree
+namespace _2.BinaryTree
 {
     class BinaryTree<T> where T : IComparable
     {
@@ -62,7 +62,7 @@ namespace _2.Tree
             {
                 int result = current.CompareTo(data);
                 if (result > 0)
-                { 
+                {
                     parent = current;
                     current = current.Left;
                 }
@@ -78,7 +78,6 @@ namespace _2.Tree
             }
             return current;
         }
-        
         public bool Remove(T data)
         {
             Node<T> current, parent;
@@ -99,34 +98,34 @@ namespace _2.Tree
                 }
                 else
                 {
-                    int result = parent.CompareTo(current.Data); 
-                    
+                    int result = parent.CompareTo(current.Data);
+
                     if (result > 0)
                     {
                         // Если значение родителя больше текущего,
                         // левый ребенок текущего узла становится левым ребенком родителя.
-                        parent.Left = current.Left; 
+                        parent.Left = current.Left;
                     }
                     else if (result < 0)
                     {
                         // Если значение родителя меньше текущего, 
                         // левый ребенок текущего узла становится правым ребенком родителя. 
-                        parent.Right = current.Left; 
-                    } 
-                } 
-            } 
+                        parent.Right = current.Left;
+                    }
+                }
+            }
             // Случай 2: Есть правый ребенок. Если у правого ребенка нет детей слева 
             // то он занимает место удаляемого узла. 
-            else if (current.Right.Left == null) 
-            { 
-                current.Right.Left = current.Left; 
-                if (parent == null) 
+            else if (current.Right.Left == null)
+            {
+                current.Right.Left = current.Left;
+                if (parent == null)
                 {
-                    Parent = current.Right; 
-                } 
-                else 
-                { 
-                    int result = parent.CompareTo(current.Data); 
+                    Parent = current.Right;
+                }
+                else
+                {
+                    int result = parent.CompareTo(current.Data);
                     if (result > 0)
                     {
                         // Если значение родителя больше текущего,
@@ -134,37 +133,37 @@ namespace _2.Tree
                         parent.Left = current.Right;
                     }
                     else if (result < 0)
-                    { 
+                    {
                         // Если значение родителя меньше текущего, 
                         // правый ребенок текущего узла становится правым ребенком родителя. 
-                        parent.Right = current.Right; 
-                    } 
+                        parent.Right = current.Right;
+                    }
                 }
             }
             // Случай 3: Если у правого ребенка есть дети слева, крайний левый ребенок 
             // из правого поддерева заменяет удаляемый узел. 
-            else 
-            { 
+            else
+            {
                 // Найдем крайний левый узел. 
                 Node<T> leftmost = current.Right.Left;
-                Node<T> leftmostParent = current.Right; 
-                while (leftmost.Left != null) 
+                Node<T> leftmostParent = current.Right;
+                while (leftmost.Left != null)
                 {
-                    leftmostParent = leftmost; 
-                    leftmost = leftmost.Left; 
-                } 
+                    leftmostParent = leftmost;
+                    leftmost = leftmost.Left;
+                }
                 // Левое поддерево родителя становится правым поддеревом крайнего левого узла. 
-                leftmostParent.Left = leftmost.Right; 
+                leftmostParent.Left = leftmost.Right;
                 // Левый и правый ребенок текущего узла становится левым и правым ребенком крайнего левого. 
-                leftmost.Left = current.Left; 
-                leftmost.Right = current.Right; 
-                if (parent == null) 
-                { 
-                    Parent = leftmost; 
-                } 
-                else 
+                leftmost.Left = current.Left;
+                leftmost.Right = current.Right;
+                if (parent == null)
                 {
-                    int result = parent.CompareTo(current.Data); 
+                    Parent = leftmost;
+                }
+                else
+                {
+                    int result = parent.CompareTo(current.Data);
                     if (result > 0)
                     {
                         // Если значение родителя больше текущего,
@@ -181,7 +180,6 @@ namespace _2.Tree
             }
             return true;
         }
-           
         public void Clear()
         {
             Parent = null;
