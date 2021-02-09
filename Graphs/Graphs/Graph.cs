@@ -10,7 +10,7 @@ namespace Graphs
     {
         List<Vertex> Vertexes = new List<Vertex>();
         List<Edge> Edges = new List<Edge>();
-        List<Vertex> list = new List<Vertex>();
+        //List<Vertex> list = new List<Vertex>();
         public int VertexCount => Vertexes.Count;
         public int EdgeCount => Edges.Count;
         public void AddVertex(Vertex vertex)
@@ -85,29 +85,39 @@ namespace Graphs
                 }
             }
             list.RemoveAt(0);
-            return list;
-        }
-
-        public List<Vertex> DFS(Vertex start)
-        {
-            foreach (var v in GetVertexList(start))
-            {
-                if (!v.Visited)
-                {
-                    v.Visited = true;
-                    list.Add(v);
-                    DFS(v);
-                }
-            }
-            return list;
-        }
-        public void PrintList(List<Vertex> list, Vertex start)
-        {
             for (int i = 0; i < list.Count; i++)
             {
                 list[i].Visited = false;
             }
-
+            return list;
+        }
+       
+        public List<Vertex> DFS(Vertex start)
+        {
+            var list = new List<Vertex> { start };
+            for (int k = 0; k < list.Count; k++)
+            {
+                for (int i = 0; i < list.Count; i++)
+                {
+                    var parentVertex = list[i];
+                    var children = GetVertexList(parentVertex);
+                    for (int j = 0; j < children.Count; j++)
+                    {
+                        var vertex = children[j];
+                        if (!vertex.Visited)
+                        {
+                            vertex.Visited = true;
+                            list.Add(vertex);
+                            break;
+                        }
+                    }
+                }
+            }
+            list.RemoveAt(0);
+            return list;
+        }
+        public void PrintList(List<Vertex> list, Vertex start)
+        {
             Console.WriteLine("\n");
             Console.Write(start.Number + " ");
             foreach (var v in list)

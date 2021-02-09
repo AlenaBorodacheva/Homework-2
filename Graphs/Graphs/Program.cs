@@ -40,8 +40,11 @@ namespace Graphs
             graph.PrintMatrix(graph);
 
             graph.PrintList(graph.BFS(v1),v1);
-            graph.PrintList(graph.DFS(v1),v1);
-           
+            graph.PrintList(graph.DFS(v1), v1);
+            Console.WriteLine("\n");
+            graph.PrintMatrix(graph);
+
+
             Console.ReadLine();
         }
     }
